@@ -1,7 +1,9 @@
-name: static analysis
+name: Git guard. Branch must be merged into `develop` before merging into `main` 
 
 on:
   pull_request:
+    branches:    
+      - main
 
 jobs:
   static-analysis:

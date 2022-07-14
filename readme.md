@@ -2,4 +2,4 @@ This is initial readme
 
 This is develop branch
 
-This is feature 1
+Patch 1 is merged now 

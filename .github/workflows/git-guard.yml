@@ -1,0 +1,20 @@
+name: static analysis
+
+on:
+  pull_request:
+
+jobs:
+  static-analysis:
+    runs-on: ubuntu-latest
+
+    env:
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch all
+        run: git fetch
+
+      - name: Guard
+        run: ./git-guard.sh ${{ BRANCH_NAME }} develop

@@ -7,9 +7,6 @@ jobs:
   static-analysis:
     runs-on: ubuntu-latest
 
-    env:
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-
     steps:
       - uses: actions/checkout@v2
 
@@ -17,4 +14,4 @@ jobs:
         run: git fetch
 
       - name: Guard
-        run: ./git-guard.sh ${{ BRANCH_NAME }} develop
+        run: ./git-guard.sh ${{ github.ref_name }} develop

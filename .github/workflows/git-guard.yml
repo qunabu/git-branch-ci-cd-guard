@@ -11,9 +11,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Fetch all
         run: git fetch
 
       - name: Guard
-        run: ./git-guard.sh ${{ github.head_ref }} develop
+        run: ./git-guard.sh origin/${{ github.head_ref }} origin/develop

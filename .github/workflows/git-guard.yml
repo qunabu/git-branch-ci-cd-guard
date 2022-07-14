@@ -14,4 +14,4 @@ jobs:
         run: git fetch
 
       - name: Guard
-        run: ./git-guard.sh ${{ github.ref_name }} develop
+        run: ./git-guard.sh ${{ github.head_ref }} develop

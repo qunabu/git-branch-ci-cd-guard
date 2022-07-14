@@ -1,3 +1,5 @@
 This is initial readme
 
-Patch 1
+This is develop branch
+
+Patch 1 is merged now 
